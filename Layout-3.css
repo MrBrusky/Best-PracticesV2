@@ -1,20 +1,31 @@
-*{
+* {
     box-sizing: border-box;
 }
-
 .container {
-    border: 4px solid lightgrey;
+    border: 4px solid lightgray;
     padding: 24px 24px 0px 24px;
     display: flex;
+    justify-content: space-between;
+    /* Running Flex here will move box-large from under box-small to beside it, then J-C:S-B will push it over */
 }
 
-
-.box { 
+.box {
     border: 4px solid lightgray;
-    width: 50%;
-    height: 100px;
     margin-bottom: 24px;
 }
-.box-large {
-
+.box-small {
+    height: 50px;
 }
+
+.box-wrapper {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+}
+/* W/O .B-W the width of .B-S will remain null and  */
+
+.box-large {
+    width: 45%;
+}
+
+/* Overall, you will need to play with metrics like width, height, border (and everything included in them) */

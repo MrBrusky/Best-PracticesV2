@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    border: 4px solid lightgray;
+    padding: 24px 24px 0px 24px;
+}
+
+.row {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    /* NEVER set the width of a row at a PIXLE cap, always a PERCENTAGE cap */
+    /* The reason for the row will cap the sides of the items in the container and allows for a smoother resizing due to setting width @ 100% and M-W to 600px ( for larger and smaller screens) */
+}
+
+.title {
+    border: 2px solid lightgray;
+    width: 100%;
+    height: 24px;
+    margin-bottom: 24px;
+    /* Without the M-B the title will sit right on top of the boxes below it */
+}
+
+.box {
+    border: 4px solid lightgray;
+    width: 30%;
+    height: 100px;
+    margin-bottom: 24px;
+    /* Same as with the Title, w/o the M-B, the boxes will BY DEFAULT sit on one another */
+}
+
+.box-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    /* F-W: W will make the 6 boxes sitting besides each other to wrap within the container */
+    justify-content: space-between;
+    /* J-C:S-B; will bring space between all the boxes on the 2 lines */
+}
